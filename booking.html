@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #444;
+      padding: 10px 20px;
+    }
+    .navbar img {
+      height: 60px;
+    }
+    .navbar h2 {
+      color: white;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      height: calc(100vh - 60px);
+      padding: 20px;
+      gap: 20px;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .content h1 {
+      font-size: 28px;
+      color: #333;
+    }
+    .options {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .options h3 {
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="https://img.freepik.com/premium-vector/travel-bus-logo-vector-illustration_600323-357.jpg" alt="Logo">
+    <h2>Bus Booking System</h2>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Center Content -->
+    <div class="content">
+      <h1>Welcome to Bus Booking System</h1>
+    </div>
+
+    <!-- Right Options -->
+    <div class="options">
+      <h3>Bus Type</h3>
+      <input type="radio" name="type"> AC <br>
+      <input type="radio" name="type"> Non-AC <br><br>
+
+      <h3>Payment Options</h3>
+      <input type="radio" name="pay"> UPI <br>
+      <input type="radio" name="pay"> Credit Card <br>
+      <input type="radio" name="pay"> Debit Card <br>
+      <input type="radio" name="pay"> Cash <br>
+    </div>
+  </div>
+
+</body>
+</html>
