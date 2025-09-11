@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+        #ary{
+            border: 5px solid black;
+            width: 300px;
+            height: 400px;
+            background-color: lightblue;
+        }
+
+     </style>
+</head>
+<body>
+    <div id="ary">
+        <button onclick="ary()">click me</button>
+        <script>
+            function ary()
+            {
+                var a=["hi","hello","how are you"];
+                document.getElementById("ary").innerHTML=a;
+            }
+        </script>
+
+    </div>
+</body>
+</html>
