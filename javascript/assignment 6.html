@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table with Even/Odd Check</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("Enter first number:"));
+        let num2 = parseInt(prompt("Enter second number:"));
+
+        for (let n = num1; n <= num2; n++) {
+            document.write("<h3>Table of " + n + ":</h3>");
+            
+            for (let i = 1; i <= 10; i++) {
+                let result = n * i;
+                
+                if (result % 2 === 0) {
+                    document.write(n + " × " + i + " = " + result + " ➝ Even<br>");
+                } else {
+                    document.write(n + " × " + i + " = " + result + " ➝ Odd<br>");
+                }
+            }
+
+            document.write("<hr>");
+        }
+    </script>
+</body>
+</html>
