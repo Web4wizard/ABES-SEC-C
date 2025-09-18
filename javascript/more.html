@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+</head>
+<body>
+  <h2>📦 Product Details</h2>
+  <div id="details"></div>
+
+  <script>
+    var products = [
+      { id: 1, name: "Phone", price: 20000, brand: "Samsung", description: "Latest 5G smartphone" },
+      { id: 2, name: "TV", price: 35000, brand: "Sony", description: "50-inch 4K Smart TV" },
+      { id: 3, name: "Game", price: 4000, brand: "Sony PS", description: "PlayStation 5 Game" }
+    ];
+
+    
+    var params = new URLSearchParams(window.location.search);
+    var productId = parseInt(params.get("id"));
+
+    var product = products.find(function(p) {
+      return p.id === productId;
+    });
+
+    if (product) {
+      document.getElementById("details").innerHTML =
+        '<div style="border:1px solid #ccc; margin:10px; padding:10px;">' +
+          '<h3>' + product.name + '</h3>' +
+          '<p><b>Price:</b> ₹' + product.price + '</p>' +
+          '<p><b>Brand:</b> ' + product.brand + '</p>' +
+          '<p><b>Description:</b> ' + product.description + '</p>' +
+        '</div>' +
+        '<a href="cart.html" style="display:inline-block;margin-top:10px;padding:5px 10px;background:blue;color:white;text-decoration:none;border-radius:5px;">Back to Cart</a>';
+    }
+  </script>
+</body>
+</html>
