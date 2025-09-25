@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <script>
-        function sum(a,b)
+           function getdata(dataid , getNextData)
         {
-          console.log(a+b);
+            setTimeout(() => {
+                console.log("data",dataid);
+                if(getNextData){
+                    getNextData();
+                }
+                // getNextData();
+            }, 2000);
         }
+        getdata(1, () => {
+            getdata(2, () => {
+                getdata(3,() => {
+                    getdata(4, () => {
+                        getdata(5);
+                    });
+                });
+            });
+        });
 
-        function calc(a,b,sumcallback)
-        {
-          sumcallback(a,b);
-        }
-        calc(10,20,sum);
+
+        // function sum(a,b)
+        // {
+        //   console.log(a+b);
+        // }
+
+        // function calc(a,b,sumcallback)
+        // {
+        //   sumcallback(a,b);
+        // }
+        // calc(10,20,sum);
     </script>
 
 </body>
