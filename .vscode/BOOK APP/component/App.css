@@ -1,0 +1,8 @@
+#ary{
+    text-align:center;
+    display: flex;
+}
+#ary Book{
+    margin: 5px;
+    border: 1px solid #ccc;
+}
